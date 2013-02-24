@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCareProvider", "HealthCareProvider\HealthCareProvider.csproj", "{2215F724-2565-4DF8-8E94-9178382BD3A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCareProvider.Tests", "HealthCareProvider.Tests\HealthCareProvider.Tests.csproj", "{079AF02B-38D0-4818-85C6-B92602D137DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCareProviderWebApiSelfHosting", "HealthCareProviderWebApiSelfHosting\HealthCareProviderWebApiSelfHosting.csproj", "{B73F55AA-B228-41F2-9E0C-8226BD06812F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCareProviderWebApiLibrary", "HealthCareProviderWebApiLibrary\HealthCareProviderWebApiLibrary.csproj", "{37C023D4-E6EF-41A9-9F92-71B1B12FC32D}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "HealthCareProviderOnWindowsAzure", "HealthCareProviderOnWindowsAzure\HealthCareProviderOnWindowsAzure.ccproj", "{459B0ECB-E008-4AB7-87E2-77304F54730F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2215F724-2565-4DF8-8E94-9178382BD3A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2215F724-2565-4DF8-8E94-9178382BD3A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2215F724-2565-4DF8-8E94-9178382BD3A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2215F724-2565-4DF8-8E94-9178382BD3A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{079AF02B-38D0-4818-85C6-B92602D137DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{079AF02B-38D0-4818-85C6-B92602D137DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{079AF02B-38D0-4818-85C6-B92602D137DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{079AF02B-38D0-4818-85C6-B92602D137DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B73F55AA-B228-41F2-9E0C-8226BD06812F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B73F55AA-B228-41F2-9E0C-8226BD06812F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B73F55AA-B228-41F2-9E0C-8226BD06812F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B73F55AA-B228-41F2-9E0C-8226BD06812F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37C023D4-E6EF-41A9-9F92-71B1B12FC32D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37C023D4-E6EF-41A9-9F92-71B1B12FC32D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37C023D4-E6EF-41A9-9F92-71B1B12FC32D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37C023D4-E6EF-41A9-9F92-71B1B12FC32D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{459B0ECB-E008-4AB7-87E2-77304F54730F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{459B0ECB-E008-4AB7-87E2-77304F54730F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{459B0ECB-E008-4AB7-87E2-77304F54730F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{459B0ECB-E008-4AB7-87E2-77304F54730F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

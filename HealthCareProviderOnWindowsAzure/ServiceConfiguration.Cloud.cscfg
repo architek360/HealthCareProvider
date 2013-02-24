@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="HealthCareProviderOnWindowsAzure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2012-10.1.8">
+  <Role name="HealthCareProvider">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=healthcareprovider;AccountKey=+2UmsgiAWb4EOguEbhP6ct7EjEoivu3K4Zyh8QkoSP3DGyk5+tK9Ua93ryxeunC21wlPEfhig5MXI8SWOgqMoQ==" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>
