@@ -72,5 +72,12 @@ namespace HealthCareProvider.Controllers
             var providers = GetProviders(filter);
             return PartialView("ProvidersWebGrid", providers); 
         }
+
+        public JsonResult GetAutocompleteData(string term)
+        {
+            var repository = new HealthCareProviderRepository();
+            var values = repository.GetHealthCareProviderAutocomplete(term);
+            return Json(values, JsonRequestBehavior.AllowGet);
+        }
     }
 }

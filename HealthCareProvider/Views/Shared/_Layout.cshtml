@@ -5,14 +5,50 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("/Content/bootstrap")
     @Scripts.Render("~/bundles/modernizr")
-</head>
-<body>
-    @RenderBody()
-
     @Scripts.Render("~/bundles/jquery")
+</head>
+<body class="container-fluid" >
+    <header>
+        <div class="navbar">    
+            <div class="navbar-inner">
+                <div class="container">
+
+                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+
+                    <!-- Be sure to leave the brand out there if you want it shown -->
+                    <a class="brand" href="#">"Health care provider" </a>
+
+                    <!-- Everything you want hidden at 940px or less, place within here -->
+                    <div class="nav-collapse collapse">
+                        <!-- .nav, .navbar-search, .navbar-form, etc -->
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="@Url.Action("Index","Home")">Home</a>
+                            </li>
+                            <li><a href="@Url.Action("Index","AddProvider")">Add Place</a></li>
+                            <li><a href="#">Contactus</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+
+        @RenderBody()
+    </div>
+
+    @Styles.Render("~/Content/jqueryUi")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/AppJsFiles")
     @RenderSection("scripts", required: false)
 </body>
 </html>
-<link href="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Content/css")" rel="stylesheet" type="text/css" />
-<link href="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Content/themes/base/css")" rel="stylesheet" type="text/css" />

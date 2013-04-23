@@ -8,6 +8,7 @@ namespace HealthCareProvider.Models
 {
     interface IRepository
     {
-        string GetHealthCareProviderData(Filter filter);   
+        string GetHealthCareProviderData(Filter filter);
+        string GetHealthCareProviderAutocomplete(string searchTerm);
     }
 }

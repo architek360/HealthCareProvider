@@ -63,5 +63,21 @@ namespace HealthCareProvider.Models
                 throw;
             }
         }
+
+        public string GetHealthCareProviderAutocomplete(string searchTerm)
+        {
+            var query = new Query();
+            try
+            {
+                query.Only("category");
+                return _factual.Fetch("health-care-providers-us", query);
+
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+        }
     }
 }
