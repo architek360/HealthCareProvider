@@ -9,6 +9,7 @@
 @*http://www.my-html-codes.com/HTML5_tutorials/geolocation-simple.html*@
 @*http://www.factual.com/data-apis/places/healthcare*@
 
+
 <div class="row SearchBox">
     <form id="JqAjaxForm" class="form-horizontal" action="@Url.Action("Index", "Home")" method="POST" data-hcp-ajaxform="true" data-hcp-target="#result"  data-hcp-loadingID=".loadingSpinner">
         <fieldset>
@@ -42,9 +43,9 @@
                     </div>
                 </div>
                 <div class="control-group">
-                    @Html.LabelFor(model => model.Insurances, new { @class = "control-label" })
+                    @Html.LabelFor(model => model.Insurances, new { @class = "control-label", })
                     <div class="controls">
-                        @Html.EditorFor(model => model.Insurances, new { data_hcp_autocomplete = "true", data_hcp_autocomplete_source = @Url.Action("Index", "Home") })
+                        @Html.TextBoxFor(model => model.Insurances, new { data_staticsource = "true", data_static_items = "insurances" })
                     </div>
                 </div>
 
@@ -53,13 +54,13 @@
                 <div class="control-group">
                     @Html.LabelFor(model => model.Locality, new { @class = "control-label" })
                     <div class="controls">
-                        @Html.EditorFor(model => model.Locality)
+                        @Html.TextBoxFor(model => model.Locality, new { data_staticsource = "true", data_static_items = "localities" })
                     </div>
                 </div>
                 <div class="control-group">
                     @Html.LabelFor(model => model.Region, new { @class = "control-label" })
                     <div class="controls">
-                        @Html.EditorFor(model => model.Region)
+                        @Html.TextBoxFor(model => model.Region, new { data_staticsource = "true", data_static_items = "regions" })
                     </div>
                 </div>
             </div>
@@ -102,7 +103,18 @@
         $('#btnSearchResults').on('click', Search);
         $('form[data-hcp-ajaxform="true"]').submit(ajaxFormsubmit);
         $('input:text[data-hcp-autocomplete="true"]').each(createAutoComplete);
-    }
+        $('input:text[data-hcp-autocomplete="true"]').each(createAutoComplete);
+       
+        $('input:text[data-staticsource="true"]').each(function () { //static autoCompletes
+            var source = $(this).data('static-items');
+            
+            var listOfData= staticDataSource[source]; //staticDataSource.js
+            $(this).typeahead({
+                source: listOfData
+            });
+        });
+
+        
 
     function Search() {
         $('form[data-hcp-ajaxform="true"]').submit();

@@ -4,14 +4,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Styles.Render("/Content/bootstrap")
-    @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/bundles/jquery")
+
 </head>
-<body class="container-fluid" >
+@Styles.Render("~/Content/css")
+<style>
+    .ui-autocomplete {
+        max-height: 100px;
+        overflow-y: auto;
+        /* prevent horizontal scrollbar */
+        overflow-x: hidden;
+    }
+    /* IE 6 doesn't support max-height
+	 * we use height instead, but this forces the menu to always be this tall
+	 */
+    * html .ui-autocomplete {
+        height: 100px;
+    }
+</style>
+@Scripts.Render("~/bundles/modernizr")
+@Scripts.Render("~/bundles/jquery")
+
+<body class="container-fluid">
     <header>
-        <div class="navbar">    
+        <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
 
@@ -30,9 +45,9 @@
                         <!-- .nav, .navbar-search, .navbar-form, etc -->
                         <ul class="nav">
                             <li class="active">
-                                <a href="@Url.Action("Index","Home")">Home</a>
+                                <a href="@Url.Action("Index", "Home")">Home</a>
                             </li>
-                            <li><a href="@Url.Action("Index","AddProvider")">Add Place</a></li>
+                            <li><a href="@Url.Action("Index", "AddProvider")">Add Place</a></li>
                             <li><a href="#">Contactus</a></li>
                         </ul>
                     </div>
@@ -47,8 +62,10 @@
     </div>
 
     @Styles.Render("~/Content/jqueryUi")
+
     @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/bundles/AppJsFiles")
     @RenderSection("scripts", required: false)
+
 </body>
 </html>

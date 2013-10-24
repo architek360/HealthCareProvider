@@ -23,14 +23,22 @@ namespace HealthCareProvider
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(getStyleSheets());
+           // bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
 
-            bundles.Add(new StyleBundle("~/Content/bootstrap").Include("~/Content/bootstrap.css", "~/Content/bootstrap-responsive.csss"));
+          //  bundles.Add(new StyleBundle("~/Content/bootstrap").Include("~/Content/bootstrap.css", "~/Content/bootstrap-responsive.csss"));
             bundles.Add(new ScriptBundle("~/bundles/AppJsFiles").Include(
-                       "~/Scripts/bootstrap.js", "~/Scripts/HealthCareProviderUtility.js"));
+                       "~/Scripts/bootstrap.js", "~/Scripts/StaticDataSourceList.js","~/Scripts/HealthCareProviderUtility.js"));
 
             bundles.Add(new StyleBundle("~/Content/jqueryUi").Include(
                         "~/Content/themes/base/jquery-ui.css"));
+        }
+
+        public static StyleBundle getStyleSheets()
+        {
+            var styles = new StyleBundle("~/Content/css");
+            styles.Include("~/Content/site.css", "~/Content/bootstrap.css", "~/Content/bootstrap-responsive.csss");
+            return styles;
         }
     }
 }
