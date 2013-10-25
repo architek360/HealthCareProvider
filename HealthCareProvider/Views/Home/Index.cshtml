@@ -103,19 +103,16 @@
         $('#btnSearchResults').on('click', Search);
         $('form[data-hcp-ajaxform="true"]').submit(ajaxFormsubmit);
         $('input:text[data-hcp-autocomplete="true"]').each(createAutoComplete);
-        $('input:text[data-hcp-autocomplete="true"]').each(createAutoComplete);
-       
         $('input:text[data-staticsource="true"]').each(function () { //static autoCompletes
             var source = $(this).data('static-items');
-            
-            var listOfData= staticDataSource[source]; //staticDataSource.js
+
+            var listOfData = staticDataSource[source]; //staticDataSource.js
             $(this).typeahead({
                 source: listOfData
             });
         });
-
-        
-
+    }
+    
     function Search() {
         $('form[data-hcp-ajaxform="true"]').submit();
     }
